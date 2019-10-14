@@ -1,0 +1,28 @@
+
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+      firstName: admin
+    filter:
+      create: All tasks
+    job-execution:
+      enabled: true
+    metrics:
+      enabled: false
+      db-reporter-activate: false
+
+
+spring:
+  application:
+    name: wct-iot
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/camunda02?serverTimezone=GMT%2B8&autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+server:
+  port: 8080
